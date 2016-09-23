@@ -1,6 +1,6 @@
 
 var assert = require('assert'),
-    tc2s   = require('./tc2s.es6.js');
+    tc2s   = require('./tc2s.es5.js');
 
 
 

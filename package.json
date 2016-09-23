@@ -1,19 +1,24 @@
 {
   "name": "tc2s",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "timecodes to seconds",
-  "main": "tc2s.es6.js",
+  "main": "tc2s.es5.js",
   "dependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.14.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",
+    "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
     "mocha": "^3.0.2"
   },
   "scripts": {
+    "clean": "rm -rf tc2s.es5.js",
+    "babel": "node ./node_modules/babel-cli/bin/babel tc2s.es6.js --out-file tc2s.es5.js --presets es2015",
+    "build": "npm run clean && npm run babel && npm run test",
+    "install": "npm run build",
     "test": "mocha tests.js"
   },
   "repository": {

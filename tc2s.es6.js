@@ -33,4 +33,4 @@ function to_ms(tc, options) {
 
 
 
-module.exports = { usec, to_ms };
+export { usec, to_ms };
