@@ -55,3 +55,52 @@ describe('tc2s.to_ms', function() {
   });
 
 });
+
+
+
+
+
+describe('tc2s.to_film60', function() {
+
+  const should = (str, val) => it(`"${str}" should return ${val}`, () => assert.equal(val, tc2s.to_film60(str)));
+
+  describe('unit basics', () => {
+
+    should("1",          1    );
+    should("2",          1 * 2);
+
+    should("1s",        60    );
+    should("2s",        60 * 2);
+
+    should("1m",      3600    );
+    should("2m",      3600 * 2);
+
+    should("1h",    216000    );
+    should("2h",    216000 * 2);
+
+    should("1d",   5184000    );
+    should("2d",   5184000 * 2);
+
+    should("1w",  36288000    );
+    should("2w",  36288000 * 2);
+
+  });
+
+
+  describe('repetitions of a block', () => {
+
+    should("1s1s",   120);
+    should("1h1s1h", (216000 * 2) + 60)
+
+  });
+
+  // various ways to write 1m 45s
+  describe('rephrasings of 1m45s', () => {
+
+    should("1m45s",  6300);
+    should("1m 45s", 6300);
+    should("45s 1m", 6300);
+
+  });
+
+});
