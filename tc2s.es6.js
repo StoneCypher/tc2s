@@ -15,7 +15,7 @@ const usec = {
 
 
 
-function tc2s(tc, options) {
+function to_ms(tc, options) {
 
     const rollup = (prev = 0, {num, frame}) => num*usec[frame] + prev;
 
@@ -29,11 +29,8 @@ function tc2s(tc, options) {
 
 }
 
-console.log(tc2s('1m45s'));
-console.log(tc2s('1m 45s'));
 
 
 
 
-
-export { usec, tc2s };
+module.exports = { usec, to_ms };

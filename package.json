@@ -1,6 +1,6 @@
 {
   "name": "tc2s",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "timecodes to seconds",
   "main": "tc2s.es6.js",
   "dependencies": {
