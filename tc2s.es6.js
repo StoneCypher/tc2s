@@ -1,5 +1,6 @@
 
 const usec = {
+
     'u' :         1,
     ''  :      1000,
     's' :      1000,
@@ -7,7 +8,12 @@ const usec = {
     'h' :   3600000,
     'd' :  86400000,
     'w' : 604800000
+
 }
+
+
+
+
 
 function tc2s(tc, options) {
 
@@ -26,4 +32,8 @@ function tc2s(tc, options) {
 console.log(tc2s('1m45s'));
 console.log(tc2s('1m 45s'));
 
-// export { tc2s };
+
+
+
+
+export { usec, tc2s };
