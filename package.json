@@ -5,7 +5,8 @@
   "main": "tc2s.es5.js",
   "dependencies": {
     "babel": "^6.5.2",
-    "babel-core": "^6.14.0"
+    "babel-core": "^6.14.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -19,7 +20,9 @@
     "babel": "node ./node_modules/babel-cli/bin/babel tc2s.es6.js --out-file tc2s.es5.js --presets es2015",
     "build": "npm run clean && npm run babel && npm run utest",
     "utest": "mocha tests.js",
-    "test": "npm run build"
+    "test": "npm run build",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -36,5 +39,6 @@
   "bugs": {
     "url": "https://github.com/StoneCypher/tc2s/issues"
   },
-  "homepage": "https://github.com/StoneCypher/tc2s#readme"
+  "homepage": "https://github.com/StoneCypher/tc2s#readme",
+  "snyk": true
 }
